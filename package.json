@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "check-format": "prettier --check .",
+    "compile": "tsc"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -21,6 +24,8 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.6.0"
+    "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.3"
   }
 }
