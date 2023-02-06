@@ -36,9 +36,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - if: ${{ secrets.ATHENA_UPSTREAM_URL != 0 }}
+      - if: ${{ secrets.ATHENA_UPSTREAM_URL }} != 0
         run: exit 1
-        
+
       - run: echo "${{ github.server_url }}/${{ github.repository }}"
       - uses: actions/checkout@v3
         with:
