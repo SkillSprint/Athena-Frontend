@@ -36,7 +36,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - if: ${{ secrets.ATHENA_UPSTREAM_URL }} != 0
+      - env:
+            super_secret: ${{ secrets.ATHENA_UPSTREAM_URL }}
+        if: ${{ env.super_secret == '' }}
         run: exit 1
 
       - run: echo "${{ github.server_url }}/${{ github.repository }}"
