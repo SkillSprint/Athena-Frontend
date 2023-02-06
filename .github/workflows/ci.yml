@@ -37,7 +37,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with: 
+        with:
+          fetch-depth: 0
           ssh-key: ${{ secrets.ATHENA_KEY }}
       - run: git branch -a
       - run: git remote -v
