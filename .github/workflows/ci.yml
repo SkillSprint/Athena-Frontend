@@ -41,3 +41,12 @@ jobs:
           ssh-key: ${{ secrets.ATHENA_KEY }}
       - run: git branch -a
       - run: git remote -v
+      - run: git remote add upstream ${{ secrets.ATHENA_UPSTREAM_URL }}
+      - run: git remote -v
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - run: git push upstream ${{ steps.extract_branch.outputs.branch }}:${{ steps.extract_branch.outputs.branch }}
