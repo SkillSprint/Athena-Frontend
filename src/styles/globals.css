@@ -1,4 +1,64 @@
-:root {
+html,
+body {
+  text-align: left;
+  display: flex; 
+  min-height: 100vh;
+  margin: 2%;
+  align-items: left; 
+  justify-content: left;
+  background-color: white;
+}
+
+.auth-form-container, .login-form {
+  display: flex;
+  flex-direction: column;
+  /* text-align: left;  */
+  align-items: left;
+}
+
+
+.loginbuff{
+  display: flex;
+  flex-direction: column;
+  /* text-align: left;  */
+  align-items: left;
+  font-size: xx-large;
+}
+
+label{
+  text-align: left; 
+  padding: 0.25ren 0;
+  color: black;
+  font-weight: bold;
+}
+
+input{
+  margin: 0.5rem 0;
+  padding: 1rem;
+  /* border: none;  */
+  border-color: black;
+  border-radius: 0px;
+  width: 150%;
+}
+
+button{
+  border: none; 
+  background-color: rgb(227, 192, 104) ;
+  padding: 5px;
+  cursor: pointer;
+  border: none; 
+  border-radius: 0px;
+  width: 150px;
+
+}
+
+link{
+  background: none;
+  background-color: black;
+  color: white;
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +164,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
